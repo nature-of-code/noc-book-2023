@@ -11,16 +11,26 @@ export default function IndexPage({ data }) {
 
       <Header />
 
-      <div className="py-8 px-6 mx-auto prose">
-        <ul>
+      <div className="py-8 px-1 mx-auto prose w-screen">
+        <table className='table-auto border-collapse '>
+          <tr >
+            <th className='border border-noc-400 border-x-0 '>Chapter</th>
+            <th className='border border-noc-400 border-x-0'>Descriptor</th>
+            <th className='border border-noc-400 border-x-0'>Videos</th>
+          </tr>
+
           {data.allChaptersJson.edges.map(({ node }) => {
             return (
-              <li key={node.id}>
-                <Link to={`/${node.slug}/`}>{node.title}</Link>
-              </li>
+              <tr key={node.id} className='py-2'>
+                <td className='border border-noc-400 border-x-0'>{node.title}</td>
+                <td className='border border-noc-400 border-x-0'>one sentence descriptor about the chapter</td>
+                <td className='border border-noc-400 border-x-0'>
+                  video icon
+                </td>
+              </tr>
             );
           })}
-        </ul>
+        </table>
       </div>
     </>
   );

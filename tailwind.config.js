@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         noc: {
-          400: '#eb005a',
+          400: '#f166c0',
           600: '#d30051',
         },
       },
