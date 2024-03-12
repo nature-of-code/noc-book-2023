@@ -3,6 +3,7 @@
   "prince": {
     "license": "license.dat",
     "javascript": true,
+    "maxPasses": 10,
     "timeout": 60000
   },
   "addPlugins": [
